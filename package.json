@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "cmdk": "^0.2.0",
     "lucide-react": "^0.279.0",
     "luxon": "^3.4.3",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-virtualized": "^9.22.5",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.4.1"
@@ -24,6 +30,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-virtualized": "^9.21.22",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
