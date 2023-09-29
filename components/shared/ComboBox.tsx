@@ -20,6 +20,7 @@ import { Input } from "../ui/input";
 import { Group } from "@/types/Schedule";
 import { useBoundScheduleStore, useScheduleStore } from "@/app/store";
 
+//TODO: FIX A LOT OF RERENDERS
 export const ComboBox = ({ items }: { items: Group[] }) => {
   const currentGroup = useBoundScheduleStore((state) => state.currentGroup);
   const setCurrentGroup = useScheduleStore((state) => state.setCurrentGroup);

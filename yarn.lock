@@ -603,10 +603,28 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tanstack/query-core@5.0.0-rc.1":
+  version "5.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.0.0-rc.1.tgz#f3635fa86283c2a4eb7071abc90a7eceda9e3802"
+  integrity sha512-6jzPCwvEHS+Y3QCildpOlIrqJXXJ+v2EvbtCnbKUi6FpOrrfoSPacVB3nr0cjSBG/rCXnTB0aaevx9T8iT9CrQ==
+
+"@tanstack/react-query@^5.0.0-rc.1":
+  version "5.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.0.0-rc.1.tgz#617689a3cf991cc87ddd95ceecb680529f4e2756"
+  integrity sha512-hFz2j/pp+faqwaBbp0KV8kgn01GfErfA1BtcwHVE/E+GJINU2ZOAiVJ43LR05JCWnIu4b9pAnOBMHv55GshMZQ==
+  dependencies:
+    "@tanstack/query-core" "5.0.0-rc.1"
+    client-only "0.0.1"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
+
+"@types/luxon@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.3.2.tgz#f6e3524c2486b949a4db445e85d93c8e9886dfe2"
+  integrity sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==
 
 "@types/node@latest":
   version "20.7.0"

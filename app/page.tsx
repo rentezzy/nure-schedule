@@ -1,4 +1,5 @@
 import { ComboBox } from "@/components/shared/ComboBox";
+import { TableTime } from "@/components/shared/TableTime";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -8,10 +9,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { api } from "@/lib/utils";
 import { Group } from "@/types/Schedule";
 
 export default async function Home() {
-  const res = await fetch("https://nure-dev.pp.ua/api/groups");
+  const res = await fetch(api("groups"));
   const groups = (await res.json()) as Group[];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -29,6 +31,7 @@ export default async function Home() {
           </div>
         </SheetContent>
       </Sheet>
+      <TableTime />
     </main>
   );
 }

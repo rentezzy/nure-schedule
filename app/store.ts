@@ -9,7 +9,7 @@ type States = {
 };
 type Actions = {
   setCurrentGroup: (group: Group) => void;
-};
+};  
 interface Store extends States, Actions {}
 
 const initialStates: States = {
@@ -38,7 +38,6 @@ export const useBoundScheduleStore = <T extends keyof States>(
   const zustandState = useScheduleStore((persistedState) =>
     selector(persistedState)
   );
-
   useEffect(() => {
     setState(zustandState);
   }, [zustandState]);
