@@ -1,13 +1,23 @@
 "use client";
+import { parseSchedule } from "@/lib/parseSchedule";
 import { api } from "@/lib/utils";
-import { DateTime } from "luxon";
-import { useQuery } from "@tanstack/react-query";
 import { Lesson } from "@/types/Schedule";
-export const TableTimeDisplay = ({ id }: { id: string }) => {
-  const startWeek = DateTime.now().startOf("week").toSeconds();
-  const endWeek = Math.trunc(DateTime.now().endOf("week").toSeconds());
+import { useQuery } from "@tanstack/react-query";
+import { DateTime } from "luxon";
+import { DayWaterrfall } from "./DayWaterrfall";
+export const TableTimeDisplay = ({
+  id,
+  week,
+}: {
+  id: string;
+  week: number;
+}) => {
+  const startWeek = DateTime.now().plus({ week }).startOf("week").toSeconds();
+  const endWeek = Math.trunc(
+    DateTime.now().plus({ week }).endOf("week").toSeconds()
+  );
   const { data, status } = useQuery({
-    queryKey: ["schedule", id],
+    queryKey: ["schedule", id, startWeek, endWeek, week],
     queryFn: async () => {
       const res = await fetch(
         api(
@@ -15,14 +25,15 @@ export const TableTimeDisplay = ({ id }: { id: string }) => {
         )
       );
       if (res.status !== 200) throw new Error("Error");
-      return (await res.json()) as Lesson[];
+      const scheduleRaw = (await res.json()) as Lesson[];
+      return parseSchedule(scheduleRaw, week);
     },
   });
   if (!data || status === "error") return <div>No lessons</div>;
   return (
-    <div>
-      {data.map((lesson) => (
-        <p key={lesson.id}>{lesson.subject.title}</p>
+    <div className="grid grid-cols-7">
+      {data.map((lessons, index) => (
+        <DayWaterrfall day={index} lessons={lessons} key={index} />
       ))}
     </div>
   );
