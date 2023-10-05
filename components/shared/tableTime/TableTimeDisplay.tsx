@@ -27,7 +27,7 @@ export const TableTimeDisplay = ({ id }: { id: string }) => {
   });
   if (!data || status === "error") return <div>No lessons</div>;
   return (
-    <div className="grid grid-cols-7">
+    <div className="grid grid-cols-7 pl-[80px] absolute z-10 h-full w-full">
       {data.map((lessons, index) => (
         <DayWaterrfall day={index} lessons={lessons} key={index} />
       ))}

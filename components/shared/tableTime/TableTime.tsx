@@ -1,10 +1,10 @@
 "use client";
 
 import { useBoundScheduleStore } from "@/app/store";
-import { TableTimeDisplay } from "./TableTimeDisplay";
-import { TimeGrid } from "../TimeGrid";
 import { useRef } from "react";
+import { TimeGrid } from "../TimeGrid";
 import { TabHeightProvider } from "./TabHeightContext";
+import { TableTimeDisplay } from "./TableTimeDisplay";
 //TODO: FIND AMOUNT OF WEEKS TO END OF SEMESTER
 export const TableTime = () => {
   const group = useBoundScheduleStore((state) => state.currentGroup);
@@ -13,8 +13,8 @@ export const TableTime = () => {
   return (
     <TabHeightProvider childRef={childRef}>
       <div className="h-full relative" ref={childRef}>
+        <TableTimeDisplay id={group.id} />
         <TimeGrid />
-        {/* <TableTimeDisplay id={group.id} /> */}
       </div>
     </TabHeightProvider>
   );
