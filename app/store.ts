@@ -9,7 +9,7 @@ type States = {
 };
 type Actions = {
   setCurrentGroup: (group: Group) => void;
-};  
+};
 interface Store extends States, Actions {}
 
 const initialStates: States = {

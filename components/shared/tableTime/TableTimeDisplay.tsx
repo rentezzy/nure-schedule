@@ -4,14 +4,10 @@ import { api } from "@/lib/utils";
 import { Lesson } from "@/types/Schedule";
 import { useQuery } from "@tanstack/react-query";
 import { DateTime } from "luxon";
-import { DayWaterrfall } from "./DayWaterrfall";
-export const TableTimeDisplay = ({
-  id,
-  week,
-}: {
-  id: string;
-  week: number;
-}) => {
+import { DayWaterrfall } from "../DayWaterrfall";
+import { useTimeTableStore } from "./tabletimeStore";
+export const TableTimeDisplay = ({ id }: { id: string }) => {
+  const week = useTimeTableStore((state) => state.week);
   const startWeek = DateTime.now().plus({ week }).startOf("week").toSeconds();
   const endWeek = Math.trunc(
     DateTime.now().plus({ week }).endOf("week").toSeconds()
