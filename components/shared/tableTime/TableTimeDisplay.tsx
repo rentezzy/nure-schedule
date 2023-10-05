@@ -4,7 +4,7 @@ import { api } from "@/lib/utils";
 import { Lesson } from "@/types/Schedule";
 import { useQuery } from "@tanstack/react-query";
 import { DateTime } from "luxon";
-import { DayWaterrfall } from "../DayWaterrfall";
+import { DayWaterrfall } from "../dayWaterfall/DayWaterrfall";
 import { useTimeTableStore } from "./tabletimeStore";
 export const TableTimeDisplay = ({ id }: { id: string }) => {
   const week = useTimeTableStore((state) => state.week);
