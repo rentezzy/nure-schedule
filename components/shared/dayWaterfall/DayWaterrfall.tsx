@@ -2,6 +2,7 @@ import { PAIRS_NUMBERS } from "@/const/const";
 import { useTabContext } from "@/hooks/useTabContext";
 import { parseDaySchedule } from "@/lib/parseSchedule";
 import { Lesson } from "@/types/Schedule";
+import { LessonCard } from "../lesson/LessonCard";
 import { LessonPlaceholder } from "./LessonPlaceholder";
 
 export const DayWaterrfall = ({
@@ -26,7 +27,7 @@ export const DayWaterrfall = ({
           return (
             <LessonPlaceholder number={pairNumber} key={pairNumber}>
               <div
-                className="grid h-full w-full"
+                className="grid h-full w-full gap-1"
                 style={{
                   gridTemplateColumns: gridColums(currentLessons?.length),
                 }}
@@ -34,9 +35,7 @@ export const DayWaterrfall = ({
                 {currentLessons &&
                   currentLessons.map((lesson, index) =>
                     index > 2 ? null : (
-                      <div className="h-full w-full" key={lesson.id}>
-                        1
-                      </div>
+                      <LessonCard lesson={lesson} key={lesson.id} />
                     )
                   )}
               </div>

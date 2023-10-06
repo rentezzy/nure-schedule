@@ -718,6 +718,32 @@
     "@typescript-eslint/types" "6.7.3"
     eslint-visitor-keys "^3.4.1"
 
+"@uiw/color-convert@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@uiw/color-convert/-/color-convert-1.4.2.tgz#888fc7462fe79fb35e076720f02d375830a8567a"
+  integrity sha512-+jnTg9xtZEUzrrp8FMl4Z9mbAO0HbEzEt5qR4bi/4gzlP3b5Dgwyd7WJnt9Q9BqfiWoEm2zVxFW9ty6UDtAElQ==
+
+"@uiw/react-color-block@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@uiw/react-color-block/-/react-color-block-1.4.2.tgz#6fda6c94cfcf64b4df681b3ca688b52dc4588096"
+  integrity sha512-UzOFZIB0BhRodX3iwhv10vRE972Mfo6XQ5UxoqWNcUf4pMXALbaSO+L6mgDiUCYe7IYNYDloUr5i57oRUe18Tg==
+  dependencies:
+    "@uiw/color-convert" "1.4.2"
+    "@uiw/react-color-editable-input" "1.4.2"
+    "@uiw/react-color-swatch" "1.4.2"
+
+"@uiw/react-color-editable-input@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@uiw/react-color-editable-input/-/react-color-editable-input-1.4.2.tgz#62b0c85a88b45ae1bc86a45f78e01e99cf139d51"
+  integrity sha512-BNTHkvcKmYifJ6v9kAKLBEz9re/MJeTklULQGoZX+iVDxekkTNTVPmcMwEQ5ww/t36Zl0LjNpl2oOGpJ9JEyXA==
+
+"@uiw/react-color-swatch@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@uiw/react-color-swatch/-/react-color-swatch-1.4.2.tgz#1c4d40e609d61322286a1e43d8ee6da75ab7290f"
+  integrity sha512-ZhaUFJMaBaUmLNtx07fb8NIcHPP59nGbUAngOeEu9q7t6LlRrKcVZ5XqH/kMF8FGnAjZbCMoiaQldzE756+0aA==
+  dependencies:
+    "@uiw/color-convert" "1.4.2"
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"

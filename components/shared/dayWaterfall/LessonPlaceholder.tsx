@@ -19,7 +19,6 @@ export const LessonPlaceholder = ({
   const height = Math.round(minutesToPixel(LESSON_LENGTH / 60));
   return (
     <div
-      className={`border border-red-500`}
       style={{
         marginTop,
         height,
