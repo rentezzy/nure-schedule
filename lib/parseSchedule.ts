@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Lesson } from "./../types/Schedule";
+import { Lesson, LessonNumber } from "./../types/Schedule";
 export const parseSchedule = (lessons: Lesson[], week: number) => {
   const currentWeekStart = DateTime.now()
     .plus({ week })
@@ -13,4 +13,18 @@ export const parseSchedule = (lessons: Lesson[], week: number) => {
     readySchedule[startDay].push(lesson);
   }
   return readySchedule;
+};
+export const parseDaySchedule = (lessons: Lesson[]) => {
+  const result: Partial<Record<LessonNumber, Lesson[]>> = {};
+
+  for (let lesson of lessons) {
+    const element = result[lesson.number_pair];
+    if (!element) {
+      result[lesson.number_pair] = [lesson];
+    } else {
+      element.push(lesson);
+    }
+  }
+
+  return result;
 };

@@ -6,3 +6,4 @@ export const LESSON_LENGTH = 5700;
 export const LESSONS_START_TIME = [
   103500, 109800, 116100, 123000, 129300, 135600,
 ];
+export const PAIRS_NUMBERS = ["1", "2", "3", "4", "5", "6"] as const;

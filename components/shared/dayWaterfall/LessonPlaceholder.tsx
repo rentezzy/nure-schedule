@@ -4,18 +4,18 @@ import {
   TIMETABLERANGE,
 } from "@/const/const";
 import { useTabContext } from "@/hooks/useTabContext";
+import { LessonNumber } from "@/types/Schedule";
 
-type LessonNumber = 1 | 2 | 3 | 4 | 5 | 6;
 export const LessonPlaceholder = ({
   children,
   number,
 }: {
   children: React.ReactNode;
-  number: number;
+  number: LessonNumber;
 }) => {
   const minutesToPixel = useTabContext();
   if (!minutesToPixel) return;
-  const marginTop = Math.round(minutesToPixel(getMarginTop(number)));
+  const marginTop = Math.round(minutesToPixel(getMarginTop(+number)));
   const height = Math.round(minutesToPixel(LESSON_LENGTH / 60));
   return (
     <div
@@ -35,6 +35,5 @@ function getMarginTop(number: number) {
       ? LESSONS_START_TIME[0] - TIMETABLERANGE[0]
       : LESSONS_START_TIME[number - 1] -
         (LESSONS_START_TIME[number - 2] + LESSON_LENGTH);
-  console.log(marginTop / 60);
   return marginTop / 60;
 }

@@ -22,10 +22,11 @@ export type Lesson = {
   start_time: number;
   end_time: number;
   auditory: string;
-  number_pair: number;
+  number_pair: LessonNumber;
   type: LessonType;
   updatedAt: string;
   groups: Group[];
   teachers: Teacher[];
   subject: Subject;
 };
+export type LessonNumber = "1" | "2" | "3" | "4" | "5" | "6";
