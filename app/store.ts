@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
+import { DEFAULT_THEME } from "@/const/const";
 import { Group } from "@/types/Schedule";
+import { Themes } from "@/types/Themes";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Themes } from "@/types/Themes";
-import { DEFAULT_THEME } from "@/const/const";
 
 type States = {
   currentGroup: Group | null;
@@ -41,9 +41,7 @@ export const useScheduleStore = create<Store>()(
     }
   )
 );
-export const useBoundScheduleStore = <T extends keyof States>(
-  selector: (state: States) => States[T]
-): States[T] => {
+export const useBoundScheduleStore = <T>(selector: (state: States) => T): T => {
   const [state, setState] = useState(selector(initialStates));
   const zustandState = useScheduleStore((persistedState) =>
     selector(persistedState)

@@ -9,7 +9,7 @@ export const LessonCard = ({ lesson }: { lesson: Lesson }) => {
   const state = useBoundScheduleStore((state) => state.theme);
   const startTime = DateTime.fromSeconds(+lesson.start_time).toFormat("HH:mm");
   const endTime = DateTime.fromSeconds(+lesson.end_time).toFormat("HH:mm");
-  let themes: Themes = state ? (state as Themes) : DEFAULT_THEME;
+  let themes: Themes = state ? state : DEFAULT_THEME;
   return (
     <div
       className="w-full h-full border rounded-md p-1 overflow-hidden"
