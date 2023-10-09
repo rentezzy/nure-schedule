@@ -8,9 +8,9 @@ export const TIMETABLERANGE = [
 export const LESSON_LENGTH = 5700;
 
 export const LESSON_TYPE_VOCAB: Record<LessonType, string> = {
-  Лб: "Лабораторні",
   Лк: "Лекції",
   Пз: "Практичні",
+  Лб: "Лабораторні",
 };
 
 export const LESSONS_START_TIME = [

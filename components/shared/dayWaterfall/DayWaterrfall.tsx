@@ -2,6 +2,7 @@ import { PAIRS_NUMBERS } from "@/const/const";
 import { useTabContext } from "@/hooks/useTabContext";
 import { parseDaySchedule } from "@/lib/parseSchedule";
 import { Lesson } from "@/types/Schedule";
+import { TimeDisplayCurrentDay, TimeDisplayDayOfWeek } from "../TimeDisplay";
 import { LessonCard } from "../lesson/LessonCard";
 import { LessonPlaceholder } from "./LessonPlaceholder";
 
@@ -13,14 +14,17 @@ export const DayWaterrfall = ({
   lessons: Lesson[];
 }) => {
   const minutesToPixel = useTabContext();
+
   if (!minutesToPixel) return;
   const headerHeight = minutesToPixel(30);
   const daySchedule = parseDaySchedule(lessons);
+
   return (
-    <div className="border-l">
-      <h3 className="text-center" style={{ height: headerHeight }}>
-        day:{day}
+    <div className="border-l relative">
+      <h3 style={{ height: headerHeight }}>
+        <TimeDisplayDayOfWeek day={day} />
       </h3>
+      <TimeDisplayCurrentDay day={day} offset={headerHeight} />
       <div className="px-1">
         {PAIRS_NUMBERS.map((pairNumber) => {
           const currentLessons = daySchedule[pairNumber];

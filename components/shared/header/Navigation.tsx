@@ -12,10 +12,6 @@ export const NavigationLeft = () => {
     </>
   );
 };
-export const NavigationMiddle = () => {
-  const { week } = useTimeTableStore();
-  return <p>{`${week}`}</p>;
-};
 export const NavigationRight = () => {
   const { week, nextWeek } = useTimeTableStore();
   return (

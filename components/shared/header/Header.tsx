@@ -1,9 +1,6 @@
 import { Sidebar } from "../Sidebar";
-import {
-  NavigationLeft,
-  NavigationMiddle,
-  NavigationRight,
-} from "./Navigation";
+import { TimeDisplayMonth } from "../TimeDisplay";
+import { NavigationLeft, NavigationRight } from "./Navigation";
 
 export const Header = () => {
   return (
@@ -13,7 +10,7 @@ export const Header = () => {
         <NavigationLeft />
       </div>
       <div>
-        <NavigationMiddle />
+        <TimeDisplayMonth />
       </div>
       <div>
         <NavigationRight />

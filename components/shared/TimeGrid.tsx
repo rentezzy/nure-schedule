@@ -4,9 +4,9 @@ import { Separator } from "../ui/separator";
 
 export const TimeGrid = () => {
   return (
-    <div className="h-full w-full flex flex-col justify-around absolute p-2 z-0">
+    <div className="h-full w-full flex flex-col justify-around absolute px-2 z-0">
       {TIMETABLERANGE.map((time) => (
-        <div key={time} className="flex mb-2 items-center gap-4">
+        <div key={time} className="flex items-center gap-4">
           <p className="w-max">
             {DateTime.fromSeconds(time).toFormat("HH:mm")}
           </p>
