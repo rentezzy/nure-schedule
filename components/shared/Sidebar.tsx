@@ -26,20 +26,23 @@ export const Sidebar = async () => {
       <SheetContent className="w-[400px] sm:w-[540px]" side="left">
         <SheetHeader>
           <SheetTitle>NURE Schedule</SheetTitle>
+          <Separator />
         </SheetHeader>
-
-        <Separator />
-        <SheetDescription className="my-2">
-          Here you can choose your group
-        </SheetDescription>
-        <div className="mb-3">
-          <ComboBox items={groups} />
+        <div className="flex flex-col justify-between h-[92vh]">
+          <section>
+            <SheetDescription className="my-2">Обрати групу</SheetDescription>
+            <div className="mb-3">
+              <ComboBox items={groups} />
+            </div>
+          </section>
+          <section>
+            <Separator />
+            <SheetDescription className="my-2">
+              Кастомізувати тему
+            </SheetDescription>
+            <ColorPickers />
+          </section>
         </div>
-        <Separator />
-        <SheetDescription className="my-2">
-          Here you can customize your theme
-        </SheetDescription>
-        <ColorPickers />
       </SheetContent>
     </Sheet>
   );

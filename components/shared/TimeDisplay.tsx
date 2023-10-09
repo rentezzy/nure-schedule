@@ -88,7 +88,7 @@ export const TimeDisplayCurrentDay = ({
   if (!currentDayInterval.contains(DateTime.now())) return;
   return (
     <Separator
-      className="absolute w-full left-0 right-0 bg-blue-600"
+      className="absolute w-full left-0 right-0 bg-blue-600 z-10"
       style={{ top: pixels }}
     />
   );

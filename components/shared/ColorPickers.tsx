@@ -36,7 +36,7 @@ export const ColorPickers = () => {
           setTempTheme({ ...DEFAULT_THEME });
         }}
       >
-        Reset to default
+        Зкинути налаштування теми
       </Button>
     </div>
   );

@@ -12,6 +12,11 @@ export const LESSON_TYPE_VOCAB: Record<LessonType, string> = {
   Пз: "Практичні",
   Лб: "Лабораторні",
 };
+export const LESSON_TYPE_VOCAB2: Record<LessonType, string> = {
+  Лк: "Лекція",
+  Пз: "Практичне заняття",
+  Лб: "Лабораторна робота",
+};
 
 export const LESSONS_START_TIME = [
   103500, 109800, 116100, 123000, 129300, 135600,
