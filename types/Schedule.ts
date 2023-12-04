@@ -16,7 +16,7 @@ export type Subject = {
   brief: string;
   title: string;
 };
-export type LessonType = "Пз" | "Лб" | "Лк";
+export type LessonType = "Пз" | "Лб" | "Лк" | "Екз" | "Конс" | "Зал";
 export type Lesson = {
   id: string;
   start_time: number;

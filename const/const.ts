@@ -1,4 +1,4 @@
-import { Lesson, LessonType } from "@/types/Schedule";
+import { LessonType } from "@/types/Schedule";
 import { Themes } from "@/types/Themes";
 
 export const TIMETABLERANGE = [
@@ -11,11 +11,17 @@ export const LESSON_TYPE_VOCAB: Record<LessonType, string> = {
   Лк: "Лекції",
   Пз: "Практичні",
   Лб: "Лабораторні",
+  Екз: "Екзамени",
+  Зал: "Заліки",
+  Конс: "Консультації",
 };
 export const LESSON_TYPE_VOCAB2: Record<LessonType, string> = {
   Лк: "Лекція",
   Пз: "Практичне заняття",
   Лб: "Лабораторна робота",
+  Екз: "Екзамен",
+  Зал: "Залік",
+  Конс: "Консультація",
 };
 
 export const LESSONS_START_TIME = [
@@ -27,33 +33,7 @@ export const DEFAULT_THEME: Themes = {
   Лб: "#9809EC",
   Лк: "#EC7909",
   Пз: "#B1EC09",
+  Екз: "#E83333",
+  Зал: "#E8E233",
+  Конс: "#E8A333",
 };
-export const MOCK_LESSON: Lesson[] = [
-  {
-    id: "507",
-    start_time: 1694772600,
-    end_time: 1694778300,
-    auditory: "320",
-    number_pair: "4",
-    type: "Лб",
-    updatedAt: "2023-09-03T09:12:27.440Z",
-    groups: [
-      {
-        id: "10304333",
-        name: "КІУКІ-22-7",
-      },
-    ],
-    teachers: [
-      {
-        id: "9073341",
-        full_name: "Мірошник Анатолій Миколайович",
-        short_name: "Мірошник А. М.",
-      },
-    ],
-    subject: {
-      id: "4306890",
-      brief: "КЛоГ",
-      title: "Комп'ютерна логіка",
-    },
-  },
-];
